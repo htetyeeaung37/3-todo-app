@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Scrollbar အကျယ် */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Scrollbar Track (အောက်ခံလမ်းကြောင်း) */
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Scrollbar Thumb (လက်နဲ့ဆွဲရတဲ့အချောင်း) */
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e5e7eb; /* နည်းနည်းပိုမြင်သာအောင် gray-200 သုံးထားပါတယ် */
+    border-radius: 100px;
+    border: 2px solid transparent; /* padding effect လေးရအောင်လို့ပါ */
+    background-clip: content-box;
+  }
+
+  /* Hover လုပ်တဲ့အခါ အရောင်ပြောင်းမယ် */
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db; /* gray-300 */
+    background-clip: content-box;
+  }
+}
